@@ -1,0 +1,425 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<!-- 按钮触发模态框 -->
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					风险提示
+				</h4>
+			</div>
+			<div class="modal-body">
+				
+委托人投资于本计划可能面临以下风险，有可能因下述风险导致委托人本金或收益损失。管理人承诺以诚实信用，谨慎勤勉的原则管理和运用集合计划资产，管理人制定并执行相应的内部控制制度和风险管理制度，以降低风险发生的概率。但这些制度和方法不能完全防止风险出现的可能，管理人不保证本计划一定盈利，也不保证最低收益。本计划面临的风险包括但不限于以下风险：
+
+1. 市场风险
+
+本集合计划主要投资于证券市场，而证券市场中的投资品价格因受各种因素的影响而引起的波动将对本集合资产管理计划资产产生潜在风险，主要包括：
+
+A、宏观经济层面的风险
+
+（1） 政策风险
+
+货币政策、财政政策、产业政策、地区发展政策等国家政策的变化对证券市场产生一定的影响，导致市场价格波动，影响集合资产管理计划收益而产生风险。
+
+（2） 经济周期风险
+
+证券市场是国民经济的晴雨表，而经济运行具有周期性的特点。宏观经济运行状况将对证券市场的收益水平产生影响，从而产生风险。
+
+（3） 利率风险
+
+金融市场利率波动会导致股票市场及债券市场的价格和收益率的变动，同时直接影响企业的融资成本和利润水平。集合计划投资于股票和债券，收益水平会受到利率变化的影响，从而产生风险。
+
+（4） 购买力风险
+
+本集合计划投资的目的是使集合计划资产保值增值，如果发生通货膨胀，集合计划投资于证券所获得的收益可能会被通货膨胀抵消，从而影响集合计划资产的保值增值。
+
+（5） 再投资风险
+
+由于金融市场利率下降造成的无法通过再投资而实现预期收益的风险。
+
+B、上市公司的经营风险
+
+上市公司的经营状况受多种因素影响，如市场、技术、竞争、管理、财务等都会导致公司盈利发生变化，从而导致集合计划投资收益变化。
+
+C、基金的业绩风险
+
+所投资的证券投资基金由于其管理人的投资失误，造成业绩下降，也会影响到集合计划的收益率。
+
+D、债券的市场风险 
+
+			</div>
+			<div class="modal-footer" style="padding-right:37%;">
+				<button type="button" class="btn btn-primary" data-dismiss="modal">接受
+				</button>
+				<button type="button" class="btn btn-default">
+					不接受
+				</button>
+				
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+</div>
+</body>
+</html>
+
+<script type="text/javascript">
+ $('#myModal').modal('show');
+</script>
+
+<html>
+<head>
+<title>Home</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+<meta charset="utf-8"> 
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+		<!---- start-smoth-scrolling---->
+		 <!-- Custom Theme files -->
+		<link href="css/theme-style.css" rel="stylesheet" type="text/css" />
+   		 <!-- Custom Theme files -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+		<!----webfonts---->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+		<!----//webfonts---->
+		<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+		<!----//End-top-nav-script---->
+</head>
+	<body>
+		<!-----start-container----->
+		
+			<!----- start-header---->
+			<div id="home" class="header">
+				<div class="container">
+					<div class="logo">
+						<a href="#"><img src="web/WechatIMG8.png" width="120" height="30" style="position:absolute; left:8%; top:20px;" title="logo"/></a>
+					</div>
+					<!----start-top-nav---->
+					 <nav class="top-nav">
+						<ul class="top-nav">
+							<li class="active"><a href="#home" class="scroll">首页 <span> </span></a></li>
+							<li class="page-scroll"><a href="#ser" class="scroll">关于我们 <span> </span></a></li>
+							<li class="page-scroll"><a href="#about" class="scroll">投资理念 <span> </span></a></li>
+							<li class="page-scroll"><a href="#port" class="scroll">加入我们 <span> </span></a></li>
+							<li class="page-scroll"><a href="#team" class="scroll">合作伙伴<span> </span></a></li>
+							<li class="contatct-active" class="page-scroll"><a href="#contact" class="scroll">联系我们 </a></li>
+						</ul>
+						<a href="#" id="pull"><img src="images/nav-icon.png" title="menu" /></a>
+					</nav>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+			<!----- //End-header---->
+			<!----- start-slider---->
+			<!----start-slider-script---->
+			<script src="js/responsiveslides.min.js"></script>
+			 <script>
+			    // You can also use "$(window).load(function() {"
+			    $(function () {
+			      // Slideshow 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: true,
+			        nav: true,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			
+			    });
+			  </script>
+			<!----//End-slider-script---->
+			<!-- Slideshow 4 -->
+			    <div  id="top" class="callbacks_container">
+			      <ul class="rslides" id="slider4">
+			        <li>
+			          <img src="web/341-city-skyline-1920x1080-artistic-wallpaper-1.jpg" alt="">
+			          <div class="caption text-center">
+			          	<div class="slide-text-info">
+			          		<a class="btn1"><span>B  O  U  N  D  L  E  S  S</span></a>
+			          		<h1>北 京 <span> 无 隅 </span> 资 产 </h1>
+			          		<div class="slide-text">
+			          			<p>国内顶尖量化投资团队</p>
+			          		</div>
+			          	</div>
+			          </div>
+			        </li>
+			        <li>
+			          <img src="web/Architecture-wallpaper-1920x1080.jpg" alt="">
+			          <div class="caption text-center">
+			          	<div class="slide-text-info">
+			          		<a class="btn1"><span><font color="#532021">发 现 价 值</font></span></a>
+			          		<h1>专注 <span> 中国 </span> 市场 </h1>
+			          		<div class="slide-text">
+			          			<p><font color="#532021">长期稳健回报</font></p>
+			          		</div>
+			          	</div>
+			          </div>
+			        </li>
+			        <li>
+			          <img src="web/iStock-509031122.jpg" alt="">
+			           <div class="caption text-center">
+			           	<div class="slide-text-info">
+			          		<a class="btn1" ><span>投 资 未 来</span></a>
+			          		<h1>成熟 <span> 量化 </span> 策略</h1>
+			          		<div class="slide-text">
+			          			<p>强大的量化研发能力和丰富的量化管理经验</p>
+			          		</div>
+			          	</div>
+			          </div>
+			        </li>
+			      </ul>
+			    </div>
+			    <div class="clearfix"> </div>
+			<!----- //End-slider---->
+			<!----start-services---->
+			<div id="ser" class="services">
+				<div class="container">
+					<div class="services-head text-center">
+						<h3>关于我们</h3>
+						<br />
+						<br />
+						<p align="left">&ensp; &ensp; &ensp;北京无隅资产管理有限公司由原华夏基金量化投资总监杨志诚与多名核心骨干共同组建，其核心团队曾经就职于高盛银行、摩根大通、德意志银行、华夏基金、工银瑞信、中再资产等多家国内外知名的资产管理机构和投资银行，公司专注于中国市场的量化投资与资产管理业务。</p>
+							<br />
+						<br />
+						<p align="left">&ensp; &ensp; &ensp;公司核心投研团队在境内外量化领域潜心工作多年，有强大的量化策略研发能力和丰富的量化组合管理经验，曾实盘管理上亿美金的海外量化投资组合和上百亿人民币的境内量化投资组合，并取得长期稳健、优异的投资业绩。
+公司的量化策略经过长期的实盘检验，在历次牛熊市场环境下均取得稳健收益，并且在多次量化策略大幅回撤的极端市场环境下保持了稳定的优秀业绩，获得了多家大型机构投资人的认可和好评。</p>
+						<br />
+						<br />
+					</div>
+					<!-----start-services-grids---->
+					<div class="services-grids">
+	
+						<div class="col-md-4 services-grid">
+							<div class="col-md-3 services-grid-left">
+								<a class="top-icon2"><span><img src="web/business-avatar-finance-settings-dollar-businessmen-company-3685c9967936a1d8-256x256.png" alt="" width="100" height="100" style="opacity:0.7; position:absolute;left:-10px; top:-2px;"></span></a>
+							</div>
+							<div class="col-md-9 services-grid-right">
+								<h4><a>策略研究</a></h4>
+								<p>量化策略开发平台充分借鉴高盛、摩根大通的成熟经验;平台对量化策略的风险和收益构成进行客观、全面的评估和分析。</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="col-md-4 services-grid">
+							<div class="col-md-3 services-grid-left">
+								<a class="top-icon3"><span> <img src="web/img_394549.png" alt="" width="100" height="100" style="opacity:0.7; position:absolute;left:-10px; top:5px;"></span></a>
+							</div>
+							<div class="col-md-9 services-grid-right">
+								<h4><a>风险控制</a></h4>
+								<p>集成在量化策略开发平台和量化投资管理系统中，对量化策略与组合的事前、事中、和事后风险进行全面的监控和分析。</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+						
+						<div class="col-md-4 services-grid">
+							<div class="col-md-3 services-grid-left">
+								<a class="top-icon5"><span> <img src="web/monitor_system_activity_graph_report_alert_recent-512.png" alt="" width="100" height="100" style="opacity:0.7; position:absolute;left:-10px; top:5px;"></span></a>
+							</div>
+							<div class="col-md-9 services-grid-right">
+								<h4><a>系统开发</a></h4>
+								<p>充分利用CIMS、IMS、讯投等量化交易系统与自有开发的量化投资管理平台，实现量化策略的自动交易和风控核规指标的全面监控。</p>
+							</div>
+							<div class="clearfix"> </div>
+						</div>
+					
+						<div class="clearfix"> </div> 
+					</div>
+				</div>
+			</div>
+			<!----//End-services---->
+					<!-----//End-services-grids---->
+					<!---- start-about----->
+					<div id="about" class="about">
+						<div class="container">
+							<div class="about-head">
+								<h4>投资理念</h4> 
+							</div>
+								<!----- start-about-grids----->
+								<div class="about-grids">
+									 <!--
+										<div class="col-md-2 about-grid-left">
+										<span> <img src="web/monitor_system_activity_graph_report_alert_recent-512.png" alt="" width="100" height="100" style="opacity:0.7; position:absolute;left:10px; top:5px;">
+										<img src="web/up-icon-2ab90ce8b71ee3abadf76ed850443950-150x150.png" alt="" width="100" height="100" style=" position:absolute;left:10px; top:220px;">
+										<img src="web/2176-512.png" alt="" width="100" height="100" style=" position:absolute;left:10px; top:470px;">
+										 </span>
+									</div>
+-->
+									<div class="col-md-12 about-grid-right">
+										<h5>多维度智能选股择时</h5> 
+										<p>从估值、成长、特殊事件、交易对手、股价历史演变等多个维度进行综合性的智能量选股择时</p>
+										<h6><font >量化风险管理</font></h6>
+										<p><font >合规风险管理：量化交易系统风控模块严格控制各项风控指标。量化投资管理系统实时监控，预警提示异常情况。风控高管全面负责，专人专岗落实风控合规要求细节</font></p> 
+										<p><font >投资风险管理：在策略开发的前期充分考虑多种潜在的市场风险，提前将风险隐患消灭在萌芽状态。通过自建的量化投资管理系统，严格监控头寸暴露，风格偏离等多项风险因素。定期对组合进行 Brinson 和 Barra 多因子业绩归因，对组合超额收益的构成和来源进行细致分析，进而优化投资组合</font></p>
+										<p><font >通过自建的量化投资管理系统，严格监控头寸暴露，风格偏离等多项风险因素。定期对组合进行 Brinson 和 Barra 多因子业绩归因，对组合超额收益的构成和来源进行细致分析，进而优化投资组合</font></p>
+										<h6>组合回撤管理</h6>
+										<p>设立严格的预警减仓机制，在市场极端情况下、或组合净值遭遇大幅回撤时，将组合规模缩减到风险可控范围，待市场恢复正常后，将组合恢复到原有规模</p>
+									</div>
+									<div class="clearfix"> </div>
+								</div>
+								<!----- //End-about-grids----->
+							</div>
+						</div>
+		<!---- //End-about----->
+		<!-----start-portfolio---->
+		<div id="port" class="portfolio-box-main">
+			<div class="container">
+				<div class="portfolio-head text-center">
+					<h3>加入我们</h3>
+					<p>与一流量化投研团队共同探索量化投资</p>
+					<div class="team-members-grids text-center">
+         			<div class="col-md-4 team-member-grid"> 
+         				<h5><a>量化策略研究员</a></h5>
+         				<span>（实习生）</span>
+         				<p align="left" style="width:80%">【岗位职责】 <br>
+         				  负责量化策略的研发，交易跟踪评价及业绩归因系统的开发；具体包括量化选股策
+         				  略、量化择时策略、人工智能算法等； <br><br>
+         				  【任职要求】 <br>
+         				  1、研究生及以上； <br>
+         				  2、金融工程、物理、计算机、数学等相关专业； <br>
+         				  3、有丰富的编程经验，熟练使用Python、MATLAB等编程语言； <br>
+         				  4、较强的学习能力和团队精神，工作认真负责； <br>
+         				  5、有一定的金融知识，良好的学习能力、团队协作能力和沟通能力;善于思考有想法。 <br>
+         				  6、每周出勤不少于三天；<br /><br />请将简历发送至：hr@wuyufund.com</p>
+         			</div> 
+         			<div class="col-md-4 team-member-grid">
+         			
+         				<h5><a>量化策略实施工程师</a></h5>
+         				<span>（实习生）</span>
+         				<p align="left" style="width:80%">【岗位职责】<br /> 负责量化策略的实施，量化系统的开发；							
+<br /><br /><br />【任职要求】
+<br />1、研究生及以上；
+<br />2、金融工程、物理、计算机、数学等相关专业；
+<br />3、熟悉HTML, Javascript, Python 等编程语言
+<br />4、熟练使用Django进行网站开发 
+<br />5、有较强学习能力和团队精神，工作认真负责；
+<br />6、有一定的金融知识，良好的学习能力、团队协作能力和沟通能力;善于思考有想法。
+<br />7、每周出勤不少于三天；<br /><br /><br />请将简历发送至：hr@wuyufund.com <br /></p> 				
+         			</div>
+         		
+         			<div class="clearfix"> </div>
+         		</div>
+				</div>
+			</div>
+		</div>
+         <!----start-team----->
+         <div id="team" class="team">
+         	<div class="container">
+         		<div class="team-head text-center">
+         			<h3>合作伙伴</h3>
+         			<p>始终坚持高质量量化投资</p>
+         		</div>
+         		
+         			<div class="about-grids">
+						<div class="col-md-7 about-grid-left">
+						<span> <img src="web/%E5%95%86%E6%A0%871.png" alt="" width="1000px" height="400px" style="position:absolute;left:60px">
+						</span>
+						</div>
+         		
+         			<div class="clearfix"> </div>
+         		</div>
+         	</div>
+         </div>
+         <!----//End-team----->
+         <!----start-contact---->
+         <div id="contact" class="contact">
+         	<div class="container">
+         		<div class="contact-head text-center">
+         			<h3>联系我们</h3>
+         			<span> </span>
+         			<p>北京无隅资产管理有限公司</p>
+         		</div>
+         		<div class="contact-grids">
+         			<div class="contact-right">
+         				<h4> </h4><br />
+         				<p align="center"><span class="icon1"> </span><a href="#">info@website.com &nbsp; &nbsp; &nbsp; </a><span class="icon2"> </span>ir@wuyufund.com &nbsp; &nbsp; <span class="icon3"> </span>北京崇文门新世界写字楼A座912</p><br />
+         			</div>
+         			<div class="clearfix"> </div>
+         		</div>
+         	</div>
+         </div>
+         <!----//End-contact---->
+         <!-----start-footer---->
+         <div class="footer">
+         	<div class="container">
+         		<div class="footer-right">
+         			<p>Copyright &copy; 2018. 北京无隅资产管理有限公司</p>
+         			<script type="text/javascript">
+						$(document).ready(function() {
+							/*
+							var defaults = {
+					  			containerID: 'toTop', // fading element id
+								containerHoverID: 'toTopHover', // fading element hover id
+								scrollSpeed: 1200,
+								easingType: 'linear' 
+					 		};
+							*/
+							
+							$().UItoTop({ easingType: 'easeOutQuart' });
+							
+						});
+					</script>
+				<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+         		</div>
+         		<div class="clearfix"> </div>
+         	</div>
+         </div>
+         <!-----//End-footer---->
+		<!-----//End-container----->
+
+</body>
+</html>
+
+
+
+
