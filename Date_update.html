@@ -1,0 +1,22 @@
+<form action="checkDate.php">
+<label for="start">Start date:</label>
+ <input id="datefield_startdate" type="date" min="2015-03-06" required>
+<script>
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+ if(dd<10){
+        dd='0'+dd
+    } 
+    if(mm<10){
+        mm='0'+mm
+    } 
+today = yyyy+'-'+mm+'-'+dd;
+document.getElementById("datefield_startdate").setAttribute("min", today);
+</script>
+
+<label for="start">End date:</label>
+<input id="datefield_enddate" type="date"  required>
+<input id="show-btn" type="submit" name="submit" value="Submit"/>
+</form>
