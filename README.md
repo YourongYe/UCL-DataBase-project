@@ -6,3 +6,4 @@ This project aims to build an auction website like ebay.
 - HTML
 - PHP
 - CSS
+- SQL (in SQL directory separately)
